@@ -1,0 +1,64 @@
+{
+  "info": {
+    "name": "Symfony User CRUD API",
+    "description": "Postman collection for Symfony User CRUD endpoints",
+    "schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
+  },
+  "item": [
+    {
+      "name": "Get all users",
+      "request": {
+        "method": "GET",
+        "url": "http://127.0.0.1:8001/api/users"
+      }
+    },
+    {
+      "name": "Get user by id",
+      "request": {
+        "method": "GET",
+        "url": "http://127.0.0.1:8001/api/users/1"
+      }
+    },
+    {
+      "name": "Create user",
+      "request": {
+        "method": "POST",
+        "header": [
+          {
+            "key": "Content-Type",
+            "value": "application/json"
+          }
+        ],
+        "body": {
+          "mode": "raw",
+          "raw": "{\n  \"name\": \"Artem Stolyarov\",\n  \"email\": \"artem.symfony@example.com\",\n  \"age\": 20\n}"
+        },
+        "url": "http://127.0.0.1:8001/api/users"
+      }
+    },
+    {
+      "name": "Update user",
+      "request": {
+        "method": "PATCH",
+        "header": [
+          {
+            "key": "Content-Type",
+            "value": "application/json"
+          }
+        ],
+        "body": {
+          "mode": "raw",
+          "raw": "{\n  \"age\": 21\n}"
+        },
+        "url": "http://127.0.0.1:8001/api/users/1"
+      }
+    },
+    {
+      "name": "Delete user",
+      "request": {
+        "method": "DELETE",
+        "url": "http://127.0.0.1:8001/api/users/1"
+      }
+    }
+  ]
+}
